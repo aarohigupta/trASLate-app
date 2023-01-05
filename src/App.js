@@ -17,7 +17,9 @@ function App() {
     // convert .h5 model to json in the terminal
     // tensorflowjs_converter --input_format keras ../models/60_epoch_model.h5 ../models/60_epoch_model.json
 
-    const model = await tf.loadLayersModel('models/tfjs_model/model.json')
+    // const model = await tf.loadLayersModel('models/tfjs_model/model.json')
+    // find an open source model
+    const model = await tf.loadLayersModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json')
 
     //  Loop and detect hands
     setInterval(() => {
